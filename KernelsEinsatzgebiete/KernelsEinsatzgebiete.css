@@ -1,0 +1,14 @@
+body {
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    list-style-position: inside;
+    text-align: center;
+}
+
+.SiteContent {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
