@@ -4,28 +4,31 @@
     <link rel="stylesheet" href="KernelsAufgaben.css">
     <title>Was ist ein Kernel?</title>
     <link rel="Icon" type="image/png" href="/KernelSeiteIcon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body>
     <div class="SiteContent">
         <h1>In diesem Abschnitt wird der Kernel eines Betriebssystems erklärt.</h1>
-        <h2>Kernel Basics</h2>
-        <p>Ein Kernel ist ein Stück low-level Software, das direkten Speicherzugriff hat. </p>
-        <p>Sie ist für verschiedene Funktionen verantwortlich, wie zum Beispiel:</p>
-        <ul>
-            <li>Schnittstelle für Software Anwendungen</li>
-            <li>Kontrolle des CPU Zugriffs</li>
-            <li>Warteschlangen verwalten bei schwachen Systemen</li>
-            <li>Input/Output verwalten</li>
-        </ul>
+        <div class="KernelBasics">
+            <h2>Kernel Basics</h2>
+            <p>Ein Kernel ist ein Stück low-level Software, das direkten Speicherzugriff hat. </p>
+            <p>Sie ist für verschiedene Funktionen verantwortlich, wie zum Beispiel:</p>
+            <ul>
+                <li>Schnittstelle für Software Anwendungen</li>
+                <li>Kontrolle des CPU Zugriffs</li>
+                <li>Warteschlangen verwalten bei schwachen Systemen</li>
+                <li>Input/Output verwalten</li>
+            </ul>
+        </div>
 
-        <h2>Architekturen</h2>
-        <p>Kernels gibt es in verschiedenen Architekturen:</p>
-        <ul>
-            <li>Der Microkernel</li>
-            <li>Der Monolithische Kernel</li>
-            <li>Der Hybridkernel</li>
-        </ul>
+        <div class="KernelArchitekturenBasics">
+            <h2>Architekturen</h2>
+            <p>Kernels gibt es in verschiedenen Architekturen:</p>
+            <ul>
+                <li>Der Microkernel</li>
+                <li>Der Monolithische Kernel</li>
+                <li>Der Hybridkernel</li>
+            </ul>
+        </div>
         
         <h2>Was macht diese Architekturen aus?</h2>
         <p>Erst müssen wir einige Dinge klären:</p>
@@ -33,21 +36,29 @@
         <p>Betriebssystemringe stellen eigentlich nur die Berechtigungsschichten eines Betriebssystems dar:</p>
         <p>Je weiter außen, desto weniger Berechtigungen hat dieser Bereich.</p>
         <img src="OperatingSystemRings.png" alt="Betriebssystemringe" height="200" width="300">
-        <h3>Was bedeutet Userspace und Kernelspace?</h3>
-        <h4>Userspace:</h4>
-        <p>Alles was außerhalb des Kernels läuft</p>
-        <h4>Kernelspace:</h4>
-        <p>Alles was innerhalb des Kernels läuft</p>
+        
+        <div class="UserspaceKernelspace">
+            <h3>Was bedeutet Userspace und Kernelspace?</h3>
+            <h4>Userspace:</h4>
+            <p>Alles was außerhalb des Kernels läuft</p>
+            <h4>Kernelspace:</h4>
+            <p>Alles was innerhalb des Kernels läuft</p>
+        </div>
 
-        <h2>Die Kernelarten selbst:</h2>
-        <h3>Der Microkernel:</h3>
-        <p>Der Microkernel ist nur mit dem nötigsten ausgestattet. Selbst Software, die auch Hardwarenähe braucht, wie z. B Treiber läuft im Userspace, also außerhalb des Kernels.</p>
-        <h3>Der Monolithische Kernel:</h3>
-        <p>Dieser Kernel hat viel mehr Ausstattung als der Microkernel. Betriebssysteme, die einen monolithischen Kernel haben laufen nur im Kernelspace.</p>
-        <h3>Der Hybridkernel:</h3>
-        <p>Der Hybridkernel ist eine Art gesunder Mix aus Monolithischer- und Microkernel. Er hat mehr Features als ein Microkernel, aber nicht genug um ein monolithischer zu sein.</p>
-        <h2>Fazit:</h2>
-        <p>Der Kernel ist, wie es vielleicht schon am Namen zu lesen ist, der Kern eines Betriebssystems. Er bietet eine wichtige Abstraktionsschicht zur Hardware und verwaltet die Ressourcen eines jeden Betriebssystems.</p>
+        <div class="Kernelarten">
+            <h2>Die Kernelarten selbst:</h2>
+            <h3>Der Microkernel:</h3>
+            <p>Der Microkernel ist nur mit dem nötigsten ausgestattet. Selbst Software, die auch Hardwarenähe braucht, wie z. B Treiber läuft im Userspace, also außerhalb des Kernels.</p>
+            <h3>Der Monolithische Kernel:</h3>
+            <p>Dieser Kernel hat viel mehr Ausstattung als der Microkernel. Betriebssysteme, die einen monolithischen Kernel haben laufen nur im Kernelspace.</p>
+            <h3>Der Hybridkernel:</h3>
+            <p>Der Hybridkernel ist eine Art gesunder Mix aus Monolithischer- und Microkernel. Er hat mehr Features als ein Microkernel, aber nicht genug um ein monolithischer zu sein.</p>
+        </div>
+
+        <div class="Fazit">
+            <h2>Fazit:</h2>
+            <p>Der Kernel ist, wie es vielleicht schon am Namen zu lesen ist, der Kern eines Betriebssystems. Er bietet eine wichtige Abstraktionsschicht zur Hardware und verwaltet die Ressourcen eines jeden Betriebssystems.</p>
+        </div>
     </div>
 </body>
 </html>
