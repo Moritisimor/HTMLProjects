@@ -1,6 +1,6 @@
 body {
-    background: #edc2c2;
-    background: linear-gradient(90deg, rgba(237, 194, 194, 1) 50%, rgba(0, 242, 141, 1) 100%);
+    background: #c5c748;
+    background: radial-gradient(circle, rgba(197, 199, 72, 1) 20%, rgba(138, 220, 146, 1) 40%, rgba(48, 252, 246, 1) 60%, rgba(163, 51, 232, 1) 80%);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     list-style-position: inside;
@@ -11,8 +11,4 @@ body {
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
-}
-
-.KernelArchitekturenBasics, .UserspaceKernelspace, .Kernelarten, .Fazit {
-    margin-bottom: 45px;
 }
