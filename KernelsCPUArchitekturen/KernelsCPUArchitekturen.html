@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="Icon" type="image/png" href="/KernelSeiteIcon.png">
+    <link rel="Icon" type="image/png" href="/KernelSeite/KernelSeiteIcon.png">
     <link rel="stylesheet" href="KernelsCPUArchitekturen.css">
     <title>Prozessorarchitekturen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -9,16 +9,42 @@
 <body>
     <div class="SiteContent">
         <h1>Hier wird sich mit CPU-Architekturen beschäftigt!</h1>
-        <div class="HauptArchitekturen">
-            <h2>Welche Architekturen gibt es?</h2>
-            <ul>
-                <li>x86_64</li>
-                <p>Diese Architektur findet man meistens in Desktops und Laptops</p>
-                <li>ARM64</li>
-                <p>Diese Architektur findet man meistens in Handys, Tablets und in manchen Laptops, wie z. B viele Chromebooks</p>
-                <li>RISC-V</li>
-                <p>Eine eher unbekannte Architektur, die allerdings in letzter Zeit an Popularität gewonnen hat.</p>
-            </ul>
+
+        <div class="RISCVSCISC">
+            <h2>RISC VS CISC</h2>
+            <h3><img src="RISC.png" width="50px" height="50px" alt="Selbstgemachtes RISC Logo">RISC</h3>
+            <p>Dies steht für Reduced Instruction Set Computing und beschreibt einen Befehlssatz, der weniger umfangreich, aber effizienter ist.</p>
+            <p>Kurzgesagt: Weniger Leistung, dafür effizienter.</p>
+            <h3><img src="CISC.png" width="50px" height="50px" alt="Selbstgemachtes CISC Logo">CISC</h3>
+            <p>Dies steht für Complex Instruction Set Computing und beschreibt einen Befehlssatz, der umfangreich, aber weniger effizient ist.</p>
+            <p>Kurzgesagt: Mehr Leistung, dafür weniger Effizienz.</p>
+        </div>
+
+        <h2>Welche Architekturen gibt es?</h2>
+
+        <div class="x86_64imDetail">
+            <h3><img src="x86.png" width="50px" height="50px" alt="Selbstgemachtes x86 Logo">x86_64</h3>
+            <p>Eine sehr bekannte Prozessorarchitektur für Desktops und Laptops. x86_64 zeichnet sich durch das Complex Instruction Set Computing(CISC) aus. 
+            Das bedeutet dass x86_64 Befehlssätze umfangreicher, aber nicht so energieeffizient wie Architekturen mit einem Reduced Instruction Set (RISC) sind.</p>
+        </div>
+
+        <div class="ARM64imDetail">
+            <h3><img src="ARM.png" width="50px" height="50px" alt="Selbstgemachtes ARM-imitierendes Logo">ARM64</h3>
+            <p>Eine weitere sehr bekannte Prozessorarchitektur für Handys, Tablets und manche Laptops. 
+            ARM64 hebt sich durch RISC hervor, was die Befählssätze einfacher, aber energieeffizienter macht.</p>
+        </div>
+
+        <div class="RISC-VimDetail">
+            <h3><img src="R-V.png" width="50px" height="50px" alt="Selbstgemachtes RISC-V Logo">RISC-V</h3>
+            <p>RISC-V ist im Vergleich zu den anderen Architekturen eher unbekannt aber nicht zu unterschätzen! 
+            Anders als die anderen Architekturen ist hier alles quelloffen und jeder kann theoretisch selbst RISC-V CPUs entwerfen, herstellen und verwenden.</p>
+        </div>
+
+        <div class="ArchitekturenImKernelKontext">
+            <h3>Wie unterscheiden sich diese Architekturen im Bezug auf Kernels?</h3>
+                <h4><img src="sys.png" width="30px" height="30px" alt="Selbstgemachtes Sys-Symbol">Syscalls</h4>
+                <p>System Calls werden anders umgesetzt! Syscalls sind dafür da, um dem Betriebssystem etwas mitzuteilen, beispielweise um die Konsole zu klären.
+                Auf Posix-basierten Systemen geht das einfach mit "clear", auf Windows allerdings mit "cls".</p>
         </div>
     </div>
 </body>
