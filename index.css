@@ -1,6 +1,6 @@
 body {
-    background: #6200ff;
-    background: linear-gradient(90deg, rgba(98, 0, 255, 1) 20%, rgba(171, 91, 112, 1) 50%, rgba(167, 199, 72, 1) 80%);
+    background: #d49dce;
+    background: linear-gradient(90deg, rgba(212, 157, 206, 1) 13%, rgba(164, 154, 237, 1) 40%, rgba(42, 135, 140, 1) 60%, rgba(82, 80, 171, 1) 93%);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     list-style-position: inside;
