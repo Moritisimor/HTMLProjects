@@ -31,7 +31,7 @@
         <div class="ARM64imDetail">
             <h3><img src="ARM.png" width="50px" height="50px" alt="Selbstgemachtes ARM-imitierendes Logo">ARM64</h3>
             <p>Eine weitere sehr bekannte Prozessorarchitektur für Handys, Tablets und manche Laptops. 
-            ARM64 hebt sich durch RISC hervor, was die Befählssätze einfacher, aber energieeffizienter macht.</p>
+            ARM64 hebt sich durch RISC hervor, was die Befehlssätze einfacher, und die Architektur energieeffizienter macht.</p>
         </div>
 
         <div class="RISC-VimDetail">
@@ -43,8 +43,9 @@
         <div class="ArchitekturenImKernelKontext">
             <h3>Wie unterscheiden sich diese Architekturen im Bezug auf Kernels?</h3>
                 <h4><img src="sys.png" width="30px" height="30px" alt="Selbstgemachtes Sys-Symbol">Syscalls</h4>
-                <p>System Calls werden anders umgesetzt! Syscalls sind dafür da, um dem Betriebssystem etwas mitzuteilen, beispielweise um die Konsole zu klären.
-                Auf Posix-basierten Systemen geht das einfach mit "clear", auf Windows allerdings mit "cls".</p>
+                <p>System Calls werden anders umgesetzt! Syscalls sind dafür da, um dem Betriebssystem aus dem Userspace etwas mitzuteilen.
+                Das betrifft z. B. das Starten eines Programmes, das Kompilieren oder auch das Schließen. Die Syscalls werden, je nach Architektur des Prozessors,
+                anders gehandhabt und anders in Maschinencode übersetzt, aber der Output bleibt der gleiche, sofern alles glatt lief bei der Übersetzung.</p>
         </div>
         <p>Hinweis: Alle hier genannten Architekturen und Technologien sind geistiges Eigentum ihres jeweiligen
         Eigentümers und ich beanspruche keinerlei Rechte an den hier genannten Architekturen oder Technologien.</p>
