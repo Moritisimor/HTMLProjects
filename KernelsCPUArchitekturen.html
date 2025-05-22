@@ -47,14 +47,14 @@
                 Das betrifft z. B. das Starten eines Programmes, das Kompilieren oder auch das Schließen. Die Syscalls werden, je nach Architektur des Prozessors,
                 anders gehandhabt und anders in Maschinencode übersetzt, aber der Output bleibt der gleiche, sofern alles glatt lief bei der Übersetzung.</p>
 
-                <h4><img src="BIOS" width="30px" height="30px" alt="Selbstgemachtes BIOS-Symbol">Bootprozesse</h4>
-                <h5>UEFI</h5>
+                <h4><img src="BIOS.png" width="30px" height="30px" alt="Selbstgemachtes BIOS-Symbol">Bootprozesse</h4>
+                <h5><img src="UEFI.png" width="30px" height="30px" alt="Selbstgemachtes UEFI-Symbol">UEFI</h5>
                 <p>Beim Starten eines x86_64 basiertem System gibt es viel Standardisierung mit UEFI und BIOS. Ein UEFI-basiertes System
                 beginnt mit Platform Initializing, dort wird der Rechner in einen Status versetzt, in dem er zumindest in der Lage ist, UEFI
                 Prozesse auszuführen, wie etwa das Treiberinitialisieren, das Identifizieren von Bootgeräten und bleibt selbst zur Laufzeit des
                 Betriebssystems aktiv um z. B. die Systemzeit abzufragen oder um Power States zu verwalten.</p>
 
-                <h5>ARM64 Bootprozess</h5>
+                <h5><img src="ARM.png" width="30px" height="30px" alt="Selbstgemachtes ARM imitierendes Symbol">ARM64 Bootprozess</h5>
                 <p>Hier ist es ähnlich wie mit UEFI, allerdings beginnt man hier direkt mit dem Bootloader. Vom Bootloader wird erwartet, jeglichen
                 Arbeitsspeicher zu finden und zu initialisieren. Hier gibt es allerdings keine einheitliche Methode. Manche Bootloader haben interne
                 Algorithmen um RAM zu finden und dessen Größe zu bestimmen, andere proprietäre Bootloader sind auf ihr jeweiliges Gerät maßgeschneidert.
