@@ -41,27 +41,31 @@
         </div>
 
         <div class="ArchitekturenImKernelKontext">
-            <h3>Wie unterscheiden sich diese Architekturen im Bezug auf Kernels?</h3>
-                <h4><img src="sys.png" width="30px" height="30px" alt="Selbstgemachtes Sys-Symbol">Syscalls</h4>
+            <h2>Wie unterscheiden sich diese Architekturen im Bezug auf Kernels?</h2>
+                <h3><img src="sys.png" width="30px" height="30px" alt="Selbstgemachtes Sys-Symbol">Syscalls</h3>
                 <p>System Calls werden anders umgesetzt! Syscalls sind dafür da, um dem Betriebssystem aus dem Userspace etwas mitzuteilen.
                 Das betrifft z. B. das Starten eines Programmes oder auch das Schließen. Die Syscalls werden, je nach Architektur des Prozessors,
                 anders gehandhabt und anders in Maschinencode übersetzt, aber der Output bleibt der gleiche, sofern alles glatt lief bei der Übersetzung.</p>
 
-                <h4><img src="BIOS.png" width="30px" height="30px" alt="Selbstgemachtes BIOS-Symbol">Bootprozesse</h4>
-                <h5><img src="UEFI.png" width="30px" height="30px" alt="Selbstgemachtes UEFI-Symbol">UEFI</h5>
+                <h3><img src="BIOS.png" width="30px" height="30px" alt="Selbstgemachtes BIOS-Symbol">Bootprozesse</h3>
+                <h4><img src="UEFI.png" width="30px" height="30px" alt="Selbstgemachtes UEFI-Symbol">UEFI</h4>
                 <p>Beim Starten eines x86_64 basiertem System gibt es viel Standardisierung mit UEFI und BIOS. Ein UEFI-basiertes System
                 beginnt mit Platform Initializing, dort wird der Rechner in einen Status versetzt, in dem er zumindest in der Lage ist, UEFI
                 Prozesse auszuführen, wie etwa das Treiberinitialisieren, das Identifizieren von Bootgeräten und bleibt selbst zur Laufzeit des
                 Betriebssystems aktiv um z. B. die Systemzeit abzufragen oder um Power States zu verwalten.</p>
 
-                <h5><img src="ARM.png" width="30px" height="30px" alt="Selbstgemachtes ARM imitierendes Symbol">ARM64 Bootprozess</h5>
-                <p>Hier ist es ähnlich wie mit UEFI, allerdings ist hier alles sehr herstellerspezifisch und oftmals proprietär. Allerdings wird nach
-                dem erfolgreichen Starten des PCs vom Bootloader wird erwartet, jeglichen Arbeitsspeicher zu finden und zu initialisieren. Hier gibt es 
-                allerdings keine einheitliche Methode. Manche Bootloader haben interne Algorithmen um RAM zu finden und dessen Größe zu bestimmen, andere 
-                proprietäre Bootloader sind auf ihr jeweiliges Gerät maßgeschneidert. Dann muss der Device Tree gestartet werden, eine Datenstruktur, die 
-                die Hardware des Systems beschreibt. Dieser Prozess ist nützlich um nicht Daten für jedes einzelne mögliche Gerät zu enthalten. Dann wird, 
-                falls das Kernel Image komprimiert ist, das Kernel Image dekomprimiert, falls nicht ist ein nicht komprimiertes Kernel Image enthalten, 
-                also gibt es nichts zu dekomprimieren. Nun kommt der letzte Schritt: Das Kernel Image wird gerufen und die Kontrollewird an den Kernel gegeben.</p>
+                <h4><img src="ARM.png" width="30px" height="30px" alt="Selbstgemachtes ARM imitierendes Symbol">ARM64 Bootprozess</h4>
+                <p>Hier ist es ähnlich wie mit UEFI, allerdings ist hier alles sehr herstellerspezifisch und oftmals proprietär. 
+                    <h5>Nach dem Systemstart</h5>
+                        <p>Nach dem erfolgreichen Starten des PCs vom Bootloader wird erwartet, jeglichen Arbeitsspeicher zu finden und zu initialisieren. Hier 
+                        gibt es allerdings keine einheitliche Methode. Manche Bootloader haben interne Algorithmen um RAM zu finden und dessen Größe zu 
+                        bestimmen, andere proprietäre Bootloader sind auf ihr jeweiliges Gerät maßgeschneidert.</p>
+                    <h5>Nach der Raminitialiserung</h5>
+                        <p>Dann muss der Device Tree gestartet werden, eine Datenstruktur, die die Hardware des Systems beschreibt. Dieser Prozess ist nützlich 
+                        um nicht Daten für jedes einzelne mögliche Gerät enthalten zu müssen, was Speicherplatz spart.
+                    <h5>Nach der DTB-Initialiserung</h5>
+                        <p>falls das Kernel Image komprimiert ist, wird dieses dekomprimiert. Falls nicht ist ein nicht komprimiertes Kernel Image enthalten, 
+                        also gibt es nichts zu dekomprimieren. Nun kommt der letzte Schritt: Das Kernel Image wird gerufen und die Kontrollewird an den Kernel gegeben.</p>
         </div>
 
         <h6>Kurzer Hinweis:</h6>
