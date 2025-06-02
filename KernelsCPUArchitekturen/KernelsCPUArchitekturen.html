@@ -13,10 +13,10 @@
 
         <div class="RISCVSCISC">
             <h2>RISC VS CISC</h2>
-            <h3><img src="RISC.png" width="50px" height="50px" alt="Selbstgemachtes RISC Logo">RISC</h3>
+            <h3><img src="Bilder/RISC.png" width="50px" height="50px" alt="Selbstgemachtes RISC Logo">RISC</h3>
             <p>Dies steht für Reduced Instruction Set Computing und beschreibt einen Befehlssatz, der weniger umfangreich, aber effizienter ist.</p>
             <p>Kurzgesagt: Weniger Leistung, dafür effizienter.</p>
-            <h3><img src="CISC.png" width="50px" height="50px" alt="Selbstgemachtes CISC Logo">CISC</h3>
+            <h3><img src="Bilder/CISC.png" width="50px" height="50px" alt="Selbstgemachtes CISC Logo">CISC</h3>
             <p>Dies steht für Complex Instruction Set Computing und beschreibt einen Befehlssatz, der umfangreicher, aber weniger effizient ist.</p>
             <p>Kurzgesagt: Mehr Leistung, dafür weniger Effizienz.</p>
         </div>
@@ -24,38 +24,38 @@
         <h2>Welche Architekturen gibt es?</h2>
 
         <div class="x86_64imDetail">
-            <h3><img src="x86.png" width="50px" height="50px" alt="Selbstgemachtes x86 Logo">x86_64</h3>
+            <h3><img src="Bilder/x86.png" width="50px" height="50px" alt="Selbstgemachtes x86 Logo">x86_64</h3>
             <p>Eine sehr bekannte Prozessorarchitektur für Desktops und Laptops. x86_64 zeichnet sich durch das Complex Instruction Set Computing (CISC) aus. 
             Das bedeutet dass x86_64 Befehlssätze umfangreicher, aber nicht so energieeffizient wie Architekturen mit einem Reduced Instruction Set (RISC) sind.</p>
         </div>
 
         <div class="ARM64imDetail">
-            <h3><img src="ARM.png" width="50px" height="50px" alt="Selbstgemachtes ARM-imitierendes Logo">ARM64</h3>
+            <h3><img src="Bilder/ARM.png" width="50px" height="50px" alt="Selbstgemachtes ARM-imitierendes Logo">ARM64</h3>
             <p>Eine weitere sehr bekannte Prozessorarchitektur für Handys, Tablets und manche Laptops. 
             ARM64 hebt sich durch RISC hervor, was die Befehlssätze einfacher, und die Architektur energieeffizienter macht.</p>
         </div>
 
         <div class="RISC-VimDetail">
-            <h3><img src="R-V.png" width="50px" height="50px" alt="Selbstgemachtes RISC-V Logo">RISC-V</h3>
+            <h3><img src="Bilder/R-V.png" width="50px" height="50px" alt="Selbstgemachtes RISC-V Logo">RISC-V</h3>
             <p>RISC-V ist im Vergleich zu den anderen Architekturen eher unbekannt, aber nicht zu unterschätzen! 
             Anders als die anderen Architekturen ist hier alles quelloffen und jeder kann theoretisch selbst RISC-V CPUs entwerfen, herstellen und verwenden.</p>
         </div>
 
         <div class="ArchitekturenImKernelKontext">
             <h2>Wie unterscheiden sich diese Architekturen im Bezug auf Kernels?</h2>
-                <h3><img src="sys.png" width="30px" height="30px" alt="Selbstgemachtes Sys-Symbol">Syscalls</h3>
+                <h3><img src="Bilder/sys.png" width="30px" height="30px" alt="Selbstgemachtes Sys-Symbol">Syscalls</h3>
                 <p>System Calls werden anders umgesetzt! Syscalls sind dafür da, um dem Kernelspace aus dem Userspace etwas mitzuteilen.
                 Das betrifft z. B. das Starten eines Programmes oder auch das Schließen. Die Syscalls werden, je nach Architektur des Prozessors,
                 anders gehandhabt und anders in Maschinencode übersetzt, aber der Output bleibt der gleiche, sofern alles glatt lief bei der Übersetzung.</p>
 
-                <h3><img src="BIOS.png" width="30px" height="30px" alt="Selbstgemachtes BIOS-Symbol">Bootprozesse</h3>
-                <h4><img src="UEFI.png" width="30px" height="30px" alt="Selbstgemachtes UEFI-Symbol">UEFI</h4>
+                <h3><img src="Bilder/BIOS.png" width="30px" height="30px" alt="Selbstgemachtes BIOS-Symbol">Bootprozesse</h3>
+                <h4><img src="Bilder/UEFI.png" width="30px" height="30px" alt="Selbstgemachtes UEFI-Symbol">UEFI</h4>
                 <p>Beim Starten eines x86_64 basiertem System gibt es viel Standardisierung mit UEFI und BIOS. Ein UEFI-basiertes System
                 beginnt mit Platform Initializing, dort wird der Rechner in einen Status versetzt, in dem er zumindest in der Lage ist, UEFI
                 Prozesse auszuführen, wie etwa das Treiberinitialisieren und das Identifizieren von Bootgeräten. Dies bleibt auch zur Laufzeit des
                 Betriebssystems aktiv, um z. B. die Systemzeit abzufragen oder um Power States zu verwalten.</p>
 
-                <h4><img src="ARM.png" width="30px" height="30px" alt="Selbstgemachtes ARM imitierendes Symbol">ARM64 Bootprozess</h4>
+                <h4><img src="Bilder/ARM.png" width="30px" height="30px" alt="Selbstgemachtes ARM imitierendes Symbol">ARM64 Bootprozess</h4>
                 <p>Hier ist es ähnlich wie mit UEFI, allerdings ist hier alles sehr herstellerspezifisch und oftmals proprietär. 
                     <h5>Nach dem Systemstart</h5>
                         <p>Nach dem erfolgreichen Starten des PCs  wird vom Bootloader wird erwartet, jeglichen Arbeitsspeicher zu finden und zu initialisieren. 
