@@ -51,10 +51,11 @@
             <h2>Die Kernelarten selbst:</h2>
             <h3>Der Microkernel:</h3>
             <p>Der Microkernel ist nur mit dem nötigsten ausgestattet. Selbst Software, die auch Hardwarenähe braucht,
-            wie z. B Treiber, läuft im Userspace, also außerhalb des Kernels.</p>
+            wie z. B Treiber, läuft im Userspace, also außerhalb des Kernels. Adressräume der Nutzerprozesse und Kernelprozesse
+            sind scharf getrennt.</p>
             <h3>Der Monolithische Kernel:</h3>
-            <p>Dieser Kernel hat viel mehr Ausstattung als der Microkernel. Betriebssysteme,
-            die einen monolithischen Kernel haben, laufen nur im Kernelspace.</p>
+            <p>Dieser Kernel hat viel mehr Ausstattung als der Microkernel. Betriebssysteme, die einen monolithischen Kernel 
+            haben, laufen nur im Kernelspace. Adressräume der Nutzer- und Systemprozesse sind nicht getrennt.</p>
             <h3>Der Hybridkernel:</h3>
             <p>Der Hybridkernel ist eine Art gesunder Mix aus Monolithischer- und Microkernel. 
             Er hat mehr Features als ein Microkernel, aber nicht genug um monolithisch zu sein.</p>
